@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">FederatedBirds</string>
+    <string name="hello">Hello world</string>
+    <string name="login">Connexion</string>
+    <string name="password">Mot de passe</string>
+    <string name="username">Login</string>
+    <string name="invalid_format">Format incorrect</string>
+    <string name="login_failed">La connexion a échoué</string>
+    <string name="home">Accueil</string>
+    <string name="settings">Réglages</string>
+    <string name="open_menu">Ouvrir le menu</string>
+    <string name="close_menu">Fermer le menu</string>
+    <string name="logout">Déconnexion</string>
+    <string name="login_progress">Connexion en cours...</string>
+    <string name="follower">Abonnés</string>
+    <string name="new_message">Nouveau message</string>
+    <string name="post">Poster</string>
+    <string name="empty_message_error">Message vide non posté.</string>
+    <string name="progress">En cours...</string>
+    <string name="post_failed">Le post a échoué.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_account_progress">Création du compte en cours...</string>
+    <string name="create_account_failed">La création du compte a échoué</string>
+    <string name="followed">Abonnements</string>
+    <string name="follow_failed">Error while trying to follow or unfollow user</string>
+    <string name="user_loading_failed">Failed to load user</string>
+    <string name="edit">Modifier</string>
+    <string name="asynctask_io_error">IO Error</string>
+    <string name="asynctask_api_error">API Error</string>
+    <string name="all">Tous</string>
+    <string name="unfollow">unfollow</string>
+    <string name="follow">follow</string>
+</resources>

@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="56dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".app.fragment.CreateAccountFragment">
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:layout_gravity="center"
+        android:hint="Login" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_gravity="center"
+        android:hint="Email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_gravity="center"
+        android:hint="Mot de passe"
+        android:layout_width="250dp"
+        android:password="true"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/create_account"
+        android:text="Créer le compte"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
