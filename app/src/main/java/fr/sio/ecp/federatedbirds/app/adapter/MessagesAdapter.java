@@ -1,5 +1,7 @@
 package fr.sio.ecp.federatedbirds.app.adapter;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,14 +16,16 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import fr.sio.ecp.federatedbirds.R;
+import fr.sio.ecp.federatedbirds.app.activity.UserActivity;
 import fr.sio.ecp.federatedbirds.model.Message;
+import fr.sio.ecp.federatedbirds.model.User;
 
 /**
  * Created by Michaël on 24/11/2015.
  */
 public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.MessageViewHolder> {
 
-    private List<Message> mMessages;
+    private static List<Message> mMessages;
 
     public void setMessages(List<Message> messages) {
         mMessages = messages;
@@ -64,6 +68,22 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Messag
             super(itemView);
             mUserAvatarView = (ImageView) itemView.findViewById(R.id.avatar);
             mTextView = (TextView) itemView.findViewById(R.id.text);
+
+            itemView.findViewById(R.id.avatar).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), UserActivity.class);
+
+                    Message message = mMessages.get(getAdapterPosition());
+                    Bundle bundle = new Bundle();
+                    bundle.putLong("userId", message.user.id);
+                    intent.putExtras(bundle);
+
+                    intent.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+
+                    v.getContext().startActivity(intent);
+                }
+            });
         }
 
     }
