@@ -26,7 +26,7 @@ import fr.sio.ecp.federatedbirds.model.User;
  * Created by Michaël on 30/11/2015.
  */
 public class UserListFragment extends Fragment implements LoaderManager.LoaderCallbacks<List<User>> {
-
+    public static final String USERS_LOADER_KEY = "UsersLoaderClassName";
     private static final int LOADER_USERS = 0;
     private UsersAdapter mUsersAdapter;
 
@@ -67,7 +67,7 @@ public class UserListFragment extends Fragment implements LoaderManager.LoaderCa
         Constructor<?> loaderConstructor = null;
 
         try {
-            loaderClass = Class.forName(this.getArguments().getString("UsersLoaderClassName"));
+            loaderClass = Class.forName(this.getArguments().getString(USERS_LOADER_KEY));
             loaderConstructor = loaderClass.getConstructor(Context.class, Long.class);
             usersLoader = (UsersLoader) loaderConstructor.newInstance(new Object[] {getContext(), null });
         } catch (Exception e) {

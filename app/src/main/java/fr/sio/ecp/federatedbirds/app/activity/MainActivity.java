@@ -55,25 +55,22 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.all:
                         fragment = new UserListFragment();
-
                         bundle = new Bundle();
-                        bundle.putString("UsersLoaderClassName", UsersAllLoader.class.getCanonicalName());
+                        bundle.putString(UserListFragment.USERS_LOADER_KEY, UsersAllLoader.class.getCanonicalName());
                         fragment.setArguments(bundle);
                         break;
 
                     case R.id.follower:
                         fragment = new UserListFragment();
-
                         bundle = new Bundle();
-                        bundle.putString("UsersLoaderClassName", UsersFollowerLoader.class.getCanonicalName());
+                        bundle.putString(UserListFragment.USERS_LOADER_KEY, UsersFollowerLoader.class.getCanonicalName());
                         fragment.setArguments(bundle);
                         break;
 
                     case R.id.followed:
                         fragment = new UserListFragment();
-
                         bundle = new Bundle();
-                        bundle.putString("UsersLoaderClassName", UsersFollowedLoader.class.getCanonicalName());
+                        bundle.putString(UserListFragment.USERS_LOADER_KEY, UsersFollowedLoader.class.getCanonicalName());
                         fragment.setArguments(bundle);
                         break;
 
